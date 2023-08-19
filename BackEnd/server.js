@@ -6,9 +6,13 @@ import { config } from "dotenv";
 
 config({ path: `.env.${process.env.NODE_ENV}` });
 
+import { userRouter } from './routes/users.route.js';
+
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.use("/auth", userRouter);
 
 const PORT = process.env.PORT;
 
