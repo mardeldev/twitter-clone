@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getData } from "../utils/getData.js";
-import Feed from "./components/index.js";
+import { getData } from "./utils/getData.js";
 import { Route, Routes } from "react-router-dom";
+import { Auth, Feed, Home, PostPeep, SavedPeeps, Sidebar } from "./components/index.js";
 
+// eslint-disable-next-line no-empty-pattern
 const App = ({ }) => {
 
   const [peepData, setPeepData] = useState([]);
@@ -24,15 +25,21 @@ const App = ({ }) => {
     }
   };
 
-  if (isLoading) {
-    return <p>Loading...</p>
-  }
+  // if (isLoading) {
+  //   return <p>Loading...</p>;
+  // }
 
   return (
-    <Routes>
-      <Route path="/feed" element={<Feed peepData={peepData} />} />
-    </Routes>
-  )
 
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/auth" element={<Auth />} />
+      <Route path="/feed" element={<Feed />} />
+      <Route path="/postpeep" element={<PostPeep />} />
+      <Route path="/savedpeeps" element={<SavedPeeps />} />
+      <Route path="/sidebar" element={<Sidebar />} />
+    </Routes>
+
+  )
 }
-export default App
+export default App;
