@@ -1,20 +1,18 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
-import bycrpt from 'bcrypt';
-import { UserModel } from '../models/users.model.js';
+import { userRegisterController } from '../controllers/userRegister.controller.js';
+import { newUserValidation } from '../middleware/chitter.validation.js';
 
 const router = express.Router()
 
 
 
+router.route("/register")
+    .post(newUserValidation, userRegisterController)
 
-router.post("/register", async (req, res) => {
-    const { username, password } = req.body;
-    const user = await UserModel.findOne({ username: username });
-    res.json(user)
-});
 
-router.post("/login");
+router.route("/login")
+    .post();
 
 
 
