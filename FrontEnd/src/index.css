@@ -20,10 +20,20 @@ a {
   text-decoration: inherit;
 }
 
-
+h2 {
+  color: white;
+}
 
 p {
   color: antiquewhite;
+}
+
+.form-label {
+  color: antiquewhite;
+}
+
+.form-text {
+  color: rgb(202, 202, 202);
 }
 
 .offcanvas {

@@ -1,4 +1,4 @@
-import SidebarCard from "./index.js";
+import { SidebarCard } from "./index.js";
 import { sidebarLinks } from "../constants";
 
 const Sidebar = () => {
@@ -62,9 +62,7 @@ const Sidebar = () => {
                         </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
     )

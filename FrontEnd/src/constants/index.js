@@ -19,4 +19,9 @@ export const sidebarLinks = [
         route: "/",
         label: "Profile",
     },
+    {
+        imgURL: "/assets/logout.svg",
+        route: "/login",
+        label: "Logout",
+    },
 ];

@@ -1,6 +1,10 @@
+import Sidebar from "./Sidebar";
+
 const Feed = () => {
     return (
-        <div><p>Feed</p></div>
+        <div>
+            <Sidebar />
+        </div>
     )
 }
 

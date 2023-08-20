@@ -1,6 +1,10 @@
+import Sidebar from "./Sidebar";
+
 const SavedPeeps = () => {
     return (
-        <div><p>SavedPeeps</p></div>
+        <div>
+            <Sidebar />
+        </div>
     )
 }
 

@@ -8,3 +8,17 @@ export const getPeepData = async () => {
         return error;
     }
 }
+
+
+export const registerUser = async (username, password) => {
+    try {
+        await axios.post("http://localhost:3000/auth/register", {
+            username,
+            password
+        });
+        alert("You have succesfully registered, please proceed to login!")
+
+    } catch (error) {
+        console.error(error);
+    }
+}

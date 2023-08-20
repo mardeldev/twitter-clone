@@ -1,7 +1,7 @@
 import Feed from "./Feed";
 import Home from "./Home";
 import Auth from "./Auth";
-import PostPeep from "./PostPeep";
+import CreatePeep from "./CreatePeep";
 import SavedPeeps from "./SavedPeeps";
 import Sidebar from "./Sidebar";
 import SidebarCard from "./SidebarCard";
@@ -14,8 +14,8 @@ export {
     Feed,
     Home,
     Login,
-    PostPeep,
-    Register
+    CreatePeep,
+    Register,
     SavedPeeps,
     Sidebar,
     SidebarCard,

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { getData } from "./utils/getData.js";
+import { getData } from "./utils/dataHandler.js";
 import { Route, Routes } from "react-router-dom";
-import { Auth, Feed, Home, PostPeep, SavedPeeps, Sidebar } from "./components/index.js";
+import { Login, Feed, Home, CreatePeep, SavedPeeps, Register } from "./components/index.js";
 
 // eslint-disable-next-line no-empty-pattern
 const App = ({ }) => {
@@ -32,9 +32,10 @@ const App = ({ }) => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/auth/login" element={<Login />} />
+      <Route path="/auth/register" element={<Register />} />
       <Route path="/feed" element={<Feed />} />
-      <Route path="/createpeep" element={<PostPeep />} />
+      <Route path="/createpeep" element={<CreatePeep />} />
       <Route path="/savedpeeps" element={<SavedPeeps />} />
 
     </Routes>
