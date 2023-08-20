@@ -1,6 +1,11 @@
+import { Login, Register } from "./index.js";
+
 const Auth = () => {
     return (
-        <div><p>Auth</p></div>
+        <div className="auth">
+            <Login />
+            <Register />
+        </div>
     )
 }
 

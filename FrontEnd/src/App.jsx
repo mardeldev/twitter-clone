@@ -30,14 +30,13 @@ const App = ({ }) => {
   // }
 
   return (
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/feed" element={<Feed />} />
-      <Route path="/postpeep" element={<PostPeep />} />
+      <Route path="/createpeep" element={<PostPeep />} />
       <Route path="/savedpeeps" element={<SavedPeeps />} />
-      <Route path="/sidebar" element={<Sidebar />} />
+
     </Routes>
 
   )
