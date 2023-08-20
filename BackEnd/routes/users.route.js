@@ -1,6 +1,5 @@
 import express from 'express';
-import { userRegisterController } from '../controllers/userRegister.controller.js';
-import { userLoginController } from '../controllers/userLogin.controller.js';
+import { userLoginController, userRegisterController } from '../controllers/user.controller.js';
 import { newUserValidation } from '../middleware/chitter.validation.js';
 
 const router = express.Router()

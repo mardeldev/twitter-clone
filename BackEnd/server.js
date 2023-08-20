@@ -5,14 +5,16 @@ import { config } from "dotenv";
 
 config({ path: `.env${process.env.NODE_ENV ? `.${process.env.NODE_ENV}` : ''}` });
 
-import { getPeepRoute } from "./routes/getPeepData.route.js";
+
 import { userRouter } from './routes/users.route.js';
+import { peepRouter } from "./routes/peeps.route.js";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 app.use("/auth", userRouter);
+app.use("/", peepRouter);
 
 const PORT = process.env.PORT;
 

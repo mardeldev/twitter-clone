@@ -18,7 +18,7 @@ export const userRegisterService = async reqBody => {
         await newUser.save();
         return { message: "Successfully registered! You can now continue to login." };
     } catch (error) {
-        throw e;
+        return e;
     }
 }
 
@@ -38,6 +38,6 @@ export const userLoginService = async reqBody => {
 
         return { token, userID: user._id };
     } catch (error) {
-        throw e;
+        return e;
     }
 }

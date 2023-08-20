@@ -7,9 +7,11 @@ const SidebarCard = ({ card: { imgURL, route, label } }) => {
 
     function onClick() {
         try {
-            if (label == "Logout") setCookies("access_token", "");
-            window.localStorage.removeItem("userID");
-            alert("Successfully logged out");
+            if (label == "Logout") {
+                setCookies("access_token", "");
+                window.localStorage.removeItem("userID");
+                alert("Successfully logged out")
+            }
         } catch (error) {
             return error
         }
