@@ -1,14 +1,33 @@
 import { useState } from "react";
+import { loginUser } from "../utils/dataHandler";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setUPassword] = useState("");
+    const navigate = useNavigate();
+
+    const [_, setCookies] = useCookies(["access_token"]);
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await loginUser(username, password, setCookies);
+            setCookies("access_token", response.data.token)
+            window.localStorage.setItem("userID", response.data.userID);
+            navigate("/");
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
 
 
     return (
         <div className="auth-container d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
 
-            <form className="mt-3">
+            <form className="mt-3" onSubmit={onSubmit}>
                 <div className="d-flex justify-content-center">
                     <img src="../src/assets/logo-short.png" alt="logo" width="200" height="200" />
                 </div>

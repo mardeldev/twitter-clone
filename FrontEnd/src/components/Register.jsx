@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { registerNewUser } from "../utils/dataHandler";
 
+
 const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setUPassword] = useState("");
@@ -9,9 +10,8 @@ const Register = () => {
         try {
             await registerNewUser(username, password);
         } catch (error) {
-            return ""
+            console.error(error);
         }
-
     }
 
 

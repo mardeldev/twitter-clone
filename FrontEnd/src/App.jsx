@@ -6,24 +6,24 @@ import { Login, Feed, Home, CreatePeep, SavedPeeps, Register } from "./component
 // eslint-disable-next-line no-empty-pattern
 const App = ({ }) => {
 
-  const [peepData, setPeepData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [peepData, setPeepData] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    fetchUserData();
-  }, [])
+  // useEffect(() => {
+  //   fetchUserData();
+  // }, [])
 
 
 
-  const fetchUserData = async () => {
-    try {
-      const response = await getData();
-      setPeepData(response);
-      setIsLoading(false);
-    } catch (error) {
-      return error;
-    }
-  };
+  // const fetchUserData = async () => {
+  //   try {
+  //     const response = await getData();
+  //     setPeepData(response);
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // };
 
   // if (isLoading) {
   //   return <p>Loading...</p>;
