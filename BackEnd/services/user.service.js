@@ -15,10 +15,14 @@ export const userRegisterService = async reqBody => {
         if (user) { return { message: "Username already taken!" } }
 
         const newUser = new UserModel({ username: username, password: hashedPassword });
+
         await newUser.save();
+
         return { message: "Successfully registered! You can now continue to login." };
     } catch (error) {
+        console.log(error);
         return error;
+
     }
 }
 

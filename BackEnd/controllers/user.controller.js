@@ -1,5 +1,5 @@
 import { validationResult } from "express-validator";
-import { userLoginService } from "../services/user.service.js";
+import { userLoginService, userRegisterService } from "../services/user.service.js";
 
 export const userLoginController = async (req, res) => {
     const errors = validationResult(req);
@@ -25,6 +25,6 @@ export const userRegisterController = async (req, res) => {
         res.status(201).json(response);
     } catch (error) {
         console.log(error);
-        res.status(400).send('Registering new user failed');
+        res.status(400).send('Registering new user failed 2');
     }
 }
