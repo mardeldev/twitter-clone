@@ -1,14 +1,21 @@
 import { Route, Routes } from "react-router-dom";
-import { Login, Feed, Home, CreatePeep, SavedPeeps, Register } from "./components/index.js";
-
-// eslint-disable-next-line no-empty-pattern
-const App = ({ }) => {
+import { Login, Home, CreatePeep, SavedPeeps, Register } from "./components/index.js";
 
 
+const App = () => {
+
+  const isLoggedIn = () => {
+    const result = window.localStorage.userID == undefined ? false : true;
+
+    return result;
+  }
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={
+        isLoggedIn() == true ? <Home /> : <Login />
+
+      } />
       <Route path="/auth/login" element={<Login />} />
       <Route path="/auth/register" element={<Register />} />
       <Route path="/createpeep" element={<CreatePeep />} />
