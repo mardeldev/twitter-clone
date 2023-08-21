@@ -35,3 +35,13 @@ export const login = async (username, password, setCookies) => {
         console.error(error);
     }
 }
+
+export const post = async (peepContent) => {
+    try {
+        await axios.post("http://localhost:3000/createpeep", peepContent);
+        alert("Peep Posted!")
+    } catch (error) {
+        console.error(error);
+        console.log(peepContent);
+    }
+}

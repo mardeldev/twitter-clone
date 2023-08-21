@@ -7,7 +7,7 @@ export const peepCreateService = async reqBody => {
         const response = await peeps.save();
         return response;
     } catch (error) {
-        return e;
+        return error;
     }
 }
 

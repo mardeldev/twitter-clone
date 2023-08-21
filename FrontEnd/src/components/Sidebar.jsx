@@ -1,5 +1,6 @@
-import { SidebarCard } from "./index.js";
+import { SidebarCard, CreatePeep } from "./index.js";
 import { sidebarLinks } from "../constants";
+
 
 
 const Sidebar = () => {
@@ -64,6 +65,7 @@ const Sidebar = () => {
                     </div>
                 </div>
             </div>
+
         </div>
 
     )

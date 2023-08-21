@@ -6,7 +6,7 @@ const PeepSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imgUrl: {
+    imgURL: {
         type: String,
         required: true
     },

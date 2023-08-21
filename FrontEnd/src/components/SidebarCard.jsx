@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useCookies } from 'react-cookie';
-import { useNavigate } from 'react-router-dom';
+import CreatePeep from './CreatePeep';
+
 
 const SidebarCard = ({ card: { imgURL, route, label } }) => {
     const [cookies, setCookies] = useCookies(["access_token"]);

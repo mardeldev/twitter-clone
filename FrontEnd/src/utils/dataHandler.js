@@ -1,4 +1,4 @@
-import { getPeepData, registerUser, login } from "./dataService.js";
+import { getPeepData, registerUser, login, post } from "./dataService.js";
 
 export const getData = async () => {
     const data = await getPeepData();
@@ -20,6 +20,15 @@ export const registerNewUser = async (username, password) => {
 
 export const loginUser = async (username, password, setCookies) => {
     const response = await login(username, password, setCookies);
+    if (response?.error) {
+        return response.error.message;
+    }
+    return response;
+}
+
+
+export const postPeep = async (peepContent) => {
+    const response = await post(peepContent);
     if (response?.error) {
         return response.error.message;
     }

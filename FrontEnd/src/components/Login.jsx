@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { loginUser } from "../utils/dataHandler";
+import { loginUser } from "../utils/dataHandler.js";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState("");
-    const [password, setUPassword] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const [_, setCookies] = useCookies(["access_token"]);
@@ -63,7 +63,7 @@ const Login = () => {
                         placeholder="password"
                         required
                         value={password}
-                        onChange={(event) => setUPassword(event.target.value)}
+                        onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
                 <div>
