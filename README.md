@@ -1,22 +1,49 @@
 Chitter Challenge
 =================
 
-* Feel free to use Google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or trainee, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit your work by 9:30am Monday morning
+Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
 
-Challenge:
--------
+![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/80aa563b-b0f8-4092-8b97-b24916927ea3)
 
-As usual please start by forking this repo.
+## Description
+For this application, I used the MERN stack of technologies among others, which include:
+### Backend: 
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Express-validator
+- JWT (JSON Web Tokens)
 
-We are going to write a small twitter clone that will allow users to post messages to a public wall.
+### Frontend
+- React
+- Axios
 
-Good luck and let the chitter begin!
+### Utility and Middleware
+- CORS (Cross-Origin Resource Sharing)
 
-Features:
--------
+### Dev Tools and Other Utilities
+- NPM
+
+# Installation
+- Clone this repo
+- Navigate to the Fackend folder and run
+```
+npm i
+```
+- Navigate to the Backend folder and run
+```
+npm i
+```
+- Open a browser and naviagte to `http://localhost:5173`.
+- You should now be able to try the app for yourself!
+
+- If you do not want to signup to try the app, you can use the following credentials to login:
+  ```
+  username: janedoe
+  password: password
+  ```
+
 
 ### Standard Acceptance Criteria
 ```
