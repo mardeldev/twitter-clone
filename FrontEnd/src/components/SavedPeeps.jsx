@@ -5,12 +5,19 @@ import { FeedCard } from "./index.js";
 
 const SavedPeeps = () => {
 
+
+
     const [savedPeeps, setSavedPeeps] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
 
     useEffect(() => {
-        fetchSavedPeeps();
+
+        if (window.localStorage.getItem("userID") != undefined) {
+
+            fetchSavedPeeps();
+
+        }
     }, [])
 
     const fetchSavedPeeps = async () => {
@@ -22,6 +29,7 @@ const SavedPeeps = () => {
             return error;
         }
     };
+
 
     if (isLoading) {
         return (

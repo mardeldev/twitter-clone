@@ -33,10 +33,12 @@ export const userLoginService = async reqBody => {
 
         if (!isPasswordValid) { return { message: "Login failed. Username and password combination is incorrect." } }
 
-        const token = jwt.sign({ id: user._id }, process.env.SECRET);
+        // const token = jwt.sign({ id: user._id }, "secret");
 
 
-        return { token, userID: user._id, username: username };
+        return { userID: user._id, username: username };
+
+        // return (user);
     } catch (error) {
         return error;
     }

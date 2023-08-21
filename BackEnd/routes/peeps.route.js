@@ -19,8 +19,8 @@ router.route("/createpeep")
 router.route("/")
     .put(saveFavePeepsController);
 
-// router.route("/savedpeeps/ids/:userID")
-//     .get(getFavPeepController);
+router.route("/savedpeeps/ids/:userID")
+    .get(getFavPeepController);
 
 router.route("/savedpeeps/:userID")
     .get(getFavPeepsController);

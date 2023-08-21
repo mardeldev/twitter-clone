@@ -53,13 +53,13 @@ const FeedCard = ({ peep, savedPeeps }) => {
 
 FeedCard.propTypes = {
     peep: PropTypes.shape({
-        _id: PropTypes.string.isRequired,
-        peepContent: PropTypes.string.isRequired,
-        imgURL: PropTypes.string.isRequired,
-        peepCreated: PropTypes.string.isRequired,
-        username: PropTypes.string.isRequired
-    }).isRequired,
-    savedPeeps: PropTypes.arrayOf(PropTypes.string).isRequired
+        _id: PropTypes.string,
+        peepContent: PropTypes.string,
+        imgURL: PropTypes.string,
+        peepCreated: PropTypes.string,
+        username: PropTypes.string
+    }),
+    savedPeeps: PropTypes.arrayOf(PropTypes.string)
 };
 
 
