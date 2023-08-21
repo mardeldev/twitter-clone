@@ -13,8 +13,10 @@ const Register = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         try {
-            await registerNewUser(username, password);
-            navigate("/");
+            const response = await registerNewUser(username, password);
+            alert(response.data.message)
+            if (response.data.message != "Username already taken!") { navigate("/"); }
+
         } catch (error) {
             console.error(error);
         }

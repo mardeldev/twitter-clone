@@ -39,12 +39,11 @@ export const getAllFavPeeps = async () => {
 
 export const registerUser = async (username, password) => {
     try {
-        await axios.post("http://localhost:3000/auth/register", {
+        const response = await axios.post("http://localhost:3000/auth/register", {
             username,
             password
         });
-        alert("You have succesfully registered, please proceed to login!")
-
+        return response;
     } catch (error) {
         console.error(error);
     }
