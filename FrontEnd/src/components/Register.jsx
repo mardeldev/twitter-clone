@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { registerNewUser } from "../utils/dataHandler";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setUPassword] = useState("");
+
+    const navigate = useNavigate();
+
     const onSubmit = async (event) => {
         event.preventDefault();
         try {
             await registerNewUser(username, password);
+            navigate("/");
         } catch (error) {
             console.error(error);
         }

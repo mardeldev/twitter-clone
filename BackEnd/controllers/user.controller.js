@@ -25,6 +25,6 @@ export const userRegisterController = async (req, res) => {
         res.status(201).json(response);
     } catch (error) {
         console.log(error);
-        res.status(400).send('Registering new user failed 2');
+        res.status(400).send('Registering new user failed.');
     }
 }
