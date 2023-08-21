@@ -44,6 +44,13 @@ npm i
   password: password
   ```
 
+# Project Planning Documentation
+### Layer Diagram
+![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/c1f298a6-5a10-4655-bf49-3b802a240f4d)
+
+### Component Diagram
+![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/9256435d-a99c-4e3b-8a6a-f056725dcb41)
+
 
 ### Standard Acceptance Criteria
 ```
