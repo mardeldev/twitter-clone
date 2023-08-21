@@ -44,6 +44,13 @@ npm i
   password: password
   ```
 
+# Project Planning Documentation
+### Layer Diagram
+![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/c1f298a6-5a10-4655-bf49-3b802a240f4d)
+
+### Component Diagram
+![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/9256435d-a99c-4e3b-8a6a-f056725dcb41)
+
 
 ### Standard Acceptance Criteria
 ```
@@ -72,23 +79,3 @@ So that I can avoid others posting messages on Chitter as me
 I want to log out of Chitter
 ```
 
-Additional requirements:
-------
-
-* You don't have to be logged in to see the peeps.
-* Trainee software engineers sign up to chitter with their email, password, name and a username (e.g. ewright@digitalfutures.com, password123, Ed Wright, edwright6975).
-* The username and email are unique.
-* Peeps (posts to chitter) have the name of the trainee and their user handle.
-* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
-
-### Extended Acceptance Criteria
-
-```
-As a trainee
-So that I can stay constantly tapped in to the shouty box of Chitter
-I want to receive an email if I am tagged in a Peep
-
-As a trainee
-In order to start a conversation as a DFA trainee Software Engineer
-I want to reply to a peep from another trainee.
-```
