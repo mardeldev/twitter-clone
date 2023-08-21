@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={
-        isLoggedIn() == true ? <Home /> : <Login />
+        isLoggedIn() ? <Home /> : <Login />
 
       } />
       <Route path="/auth/login" element={<Login />} />
