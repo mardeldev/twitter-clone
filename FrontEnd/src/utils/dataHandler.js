@@ -1,4 +1,4 @@
-import { getPeepData, registerUser, login, post, savePeep } from "./dataService.js";
+import { getPeepData, registerUser, login, post, savePeep, getFavPeeps, getAllFavPeeps } from "./dataService.js";
 
 export const getPeeps = async () => {
     const data = await getPeepData();
@@ -6,7 +6,22 @@ export const getPeeps = async () => {
         return data.error.message;
     }
     return data;
+}
 
+export const getSavedPeeps = async () => {
+    const response = await getFavPeeps();
+    if (response?.error) {
+        return response.error.message;
+    }
+    return response;
+}
+
+export const getAllSavedPeeps = async () => {
+    const response = await getAllFavPeeps();
+    if (response?.error) {
+        return response.error.message;
+    }
+    return response;
 }
 
 

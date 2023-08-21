@@ -1,14 +1,16 @@
 import { Sidebar, Feed } from "./index.js";
-import { getPeeps } from "../utils/dataHandler.js";
+import { getPeeps, getSavedPeeps } from "../utils/dataHandler.js";
 import { useState, useEffect } from "react";
 const Home = () => {
     const [peeps, setPeeps] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [savedPeeps, setSavedPeeps] = useState([]);
 
 
 
     useEffect(() => {
         fetchPeeps();
+        fetchSavedPeeps();
     }, [])
 
 
@@ -18,6 +20,15 @@ const Home = () => {
             const response = await getPeeps();
             setPeeps(response.reverse());
             setIsLoading(false);
+        } catch (error) {
+            return error;
+        }
+    };
+
+    const fetchSavedPeeps = async () => {
+        try {
+            const response = await getSavedPeeps();
+            setSavedPeeps(response.data.savedPeeps);
         } catch (error) {
             return error;
         }
@@ -34,11 +45,17 @@ const Home = () => {
 
 
 
+
+
+
+
+
+
     return (
         <div>
             <Sidebar />
             <div className="container d-flex justify-content-center align-items-center me-1">
-                <Feed peeps={peeps} />
+                <Feed peeps={peeps} savedPeeps={savedPeeps} />
             </div>
         </div>
     )

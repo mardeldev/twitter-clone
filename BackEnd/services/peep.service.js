@@ -35,9 +35,9 @@ export const peepSaveService = async (reqBody) => {
 
 
 
-export const getFavPeepService = async (reqBody) => {
+export const getFavPeepService = async (reqParams) => {
     try {
-        const user = await UserModel.findById(reqBody.userID);
+        const user = await UserModel.findById(reqParams.userID);
         return ({ savedPeeps: user?.savedPeeps });
     } catch (error) {
         return error;
@@ -45,9 +45,9 @@ export const getFavPeepService = async (reqBody) => {
 }
 
 
-export const getFavPeepsService = async (reqBody) => {
+export const getFavPeepsService = async (reqParams) => {
     try {
-        const user = await UserModel.findById(reqBody.userID);
+        const user = await UserModel.findById(reqParams.userID);
         const savedPeeps = await PeepModel.find({
             _id: { $in: user.savedPeeps },
         });

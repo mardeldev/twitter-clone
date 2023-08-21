@@ -41,7 +41,7 @@ export const saveFavePeepsController = async (req, res) => {
 export const getFavPeepsController = async (req, res) => {
 
     try {
-        const response = await getFavPeepsService(req.body);
+        const response = await getFavPeepsService(req.params);
         res.status(201).json(response);
     } catch (error) {
         console.log(error);
@@ -53,7 +53,7 @@ export const getFavPeepsController = async (req, res) => {
 export const getFavPeepController = async (req, res) => {
 
     try {
-        const response = await getFavPeepService(req.body);
+        const response = await getFavPeepService(req.params);
         res.status(201).json(response);
     } catch (error) {
         console.log(error);

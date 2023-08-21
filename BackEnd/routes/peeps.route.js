@@ -16,10 +16,10 @@ router.route("/createpeep")
 router.route("/")
     .put(saveFavePeepsController);
 
-router.route("/savedpeeps/ids")
+router.route("/savedpeeps/ids/:userID")
     .get(getFavPeepController);
 
-router.route("/savedpeeps")
+router.route("/savedpeeps/:userID")
     .get(getFavPeepsController);
 
 

@@ -13,6 +13,29 @@ export const getPeepData = async () => {
 }
 
 
+export const getFavPeeps = async () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const userID = useGetUserID();
+    try {
+        const response = await axios.get(`http://localhost:3000/savedpeeps/ids/${userID}`);
+        return response;
+    } catch (error) {
+        return error;
+    }
+}
+
+export const getAllFavPeeps = async () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const userID = useGetUserID();
+    try {
+        const response = await axios.get(`http://localhost:3000/savedpeeps/${userID}`);
+        return response;
+    } catch (error) {
+        return error;
+    }
+}
+
+
 export const registerUser = async (username, password) => {
     try {
         await axios.post("http://localhost:3000/auth/register", {
@@ -48,6 +71,7 @@ export const post = async (peepContent) => {
 }
 
 export const savePeep = async (peepID) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const userID = useGetUserID();
     try {
         const response = await axios.put("http://localhost:3000/", { peepID, userID });

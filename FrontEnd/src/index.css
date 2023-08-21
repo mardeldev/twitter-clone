@@ -33,6 +33,11 @@ div p {
   cursor: pointer;
 }
 
+.saved-card {
+  background-color: red;
+  -webkit-mask: url("./assets/heart-grey.svg") no-repeat center;
+}
+
 .feed-card {
   max-width: 540px
 }
