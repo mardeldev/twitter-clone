@@ -28,7 +28,7 @@ const Register = () => {
 
             <form className="mt-3" onSubmit={onSubmit}>
                 <div className="d-flex justify-content-center">
-                    <img src="../src/assets/logo-short.png" alt="logo" width="200" height="200" />
+                    <img src="./logo-short.png" alt="logo" width="200" height="200" />
                 </div>
 
                 <h2 className="d-flex justify-content-center">Register</h2>

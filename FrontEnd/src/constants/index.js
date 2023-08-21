@@ -5,22 +5,22 @@ export const sidebarLinks = [
         label: "Home",
     },
     {
-        imgURL: "/assets/heart.svg",
+        imgURL: "/heart.svg",
         route: "/savedpeeps",
         label: "Favourites",
     },
     {
-        imgURL: "/assets/create.svg",
+        imgURL: "/create.svg",
         route: "/createpeep",
         label: "Create Peep",
     },
     {
-        imgURL: "/assets/user.svg",
+        imgURL: "/user.svg",
         route: "/",
         label: "Profile (beta)",
     },
     {
-        imgURL: "/assets/logout.svg",
+        imgURL: "/logout.svg",
         route: "/",
         label: "Logout",
     },
