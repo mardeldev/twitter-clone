@@ -3,7 +3,8 @@ Chitter Challenge
 
 Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
 
-![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/80aa563b-b0f8-4092-8b97-b24916927ea3)
+<img width="1509" alt="image" src="https://github.com/mardeldev/chitter-challenge/assets/73969781/2ebe8e05-9709-418d-8f34-5e2ff967ff59">
+
 
 ## Description
 For this application, I used the MERN stack of technologies among others, which include:
