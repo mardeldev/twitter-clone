@@ -52,6 +52,9 @@ npm i
 ![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/9256435d-a99c-4e3b-8a6a-f056725dcb41)
 
 
+# Testing
+I have included testing on the client side to ensure the appropriate calls are made. Unfortunately I did not have enough time to fully test the server side. Throughout the writing of this app however, I implementended several layers of validation, and I plan to achieve full test coverage when I am able to dedicated more time to app.
+
 ### Standard Acceptance Criteria
 ```
 As a trainee software engineer
