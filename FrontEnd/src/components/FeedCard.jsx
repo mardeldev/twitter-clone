@@ -39,10 +39,10 @@ const FeedCard = ({ peep, savedPeeps }) => {
 
                             <p className="card-text">{peep.peepContent}</p>
                             <p className="card-text"><small className="text-body-light">{formattedDate}</small> | {peep.username}</p>
-                            <img onClick={() => savePeep(peep._id)} src="../src/assets/heart-grey.svg" alt="favourite-peep" width="20" height="20" className={`me-4 peep-card-cta ${heartColour(savedPeeps)}`} />
+                            <img onClick={() => savePeep(peep._id)} src="/heart-grey.png" alt="favourite-peep" width="20" height="20" className={`me-4 peep-card-cta ${heartColour(savedPeeps)}`} />
 
-                            <img src="../src/assets/repost.svg" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />
-                            <img src="../src/assets/share.svg" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />
+                            <img src="/repost.png" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />
+                            <img src="/share.png" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />
                         </div>
                     </div>
                 </div>

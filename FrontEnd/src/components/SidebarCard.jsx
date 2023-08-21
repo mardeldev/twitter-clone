@@ -23,7 +23,7 @@ const SidebarCard = ({ card: { imgURL, route, label } }) => {
             <div className="row align-items-center sidebar-card">
                 <a href={route} rel="nofollow" className="row align-items-center sidebar-card" onClick={onClick}>
                     <div className="col-2 me-3">
-                        < img src={`../src${imgURL}`} alt="random" />
+                        < img src={`https://mardel-chitter.netlify.app${imgURL}`} alt="random" />
                     </div>
                     <div className="col text-start">
                         {label}
