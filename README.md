@@ -53,7 +53,7 @@ npm i
 
 
 # Testing
-I have included testing on the client side to ensure the appropriate calls are made. Unfortunately I did not have enough time to fully test the server side. Throughout the writing of this app however, I implementended several layers of validation.
+I have included testing on the client side to ensure the appropriate calls are made. Unfortunately I did not have enough time to fully test the server side. Throughout the writing of this app however, I implementended several layers of validation, and I plan to achieve full test coverage when I am able to dedicated more time to app.
 
 ### Standard Acceptance Criteria
 ```
