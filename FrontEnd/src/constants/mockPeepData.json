@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "$oid": "64e2563854045b1715cefc31"
+    },
+    "peepContent": "This is a test peep!",
+        "peepCreated": {
+        "$date": "2023-08-16T00:00:00.000Z"
+    },
+    "userOwner": {
+        "$oid": "64e231e4a05c75e9dbc75461"
+    },
+    "__v": 0,
+        "username": "janedoe",
+            "imgURL": "https://cdn.discordapp.com/attachments/1110172643895808040/1142877481209167943/default-user-profile-picture_hvoncb.png"
+}
