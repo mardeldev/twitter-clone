@@ -16,7 +16,7 @@ const SavedPeeps = () => {
     const fetchSavedPeeps = async () => {
         try {
             const response = await getAllSavedPeeps();
-            setSavedPeeps(response.data.savedPeeps);
+            setSavedPeeps(response.data.savedPeeps.reverse());
             if (response) setIsLoading(false);
         } catch (error) {
             return error;
