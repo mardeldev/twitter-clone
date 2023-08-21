@@ -1,4 +1,6 @@
 Chitter Challenge
+##  >> (Visit the app here:) [https://mardel-chitter.netlify.app/] <<
+
 =================
 
 Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
@@ -36,7 +38,7 @@ npm i
 ```
 npm i
 ```
-- Open a browser and naviagte to `http://localhost:5173`.
+- Open a browser and navigate to `http://localhost:5173`.
 - You should now be able to try the app for yourself!
 
 - If you do not want to signup to try the app, you can use the following credentials to login:
@@ -54,7 +56,7 @@ npm i
 
 
 # Testing
-I have included testing on the client side to ensure the appropriate calls are made. Unfortunately I did not have enough time to fully test the server side. Throughout the writing of this app however, I implementended several layers of validation, and I plan to achieve full test coverage when I am able to dedicated more time to app.
+I have included testing on the client side to ensure the appropriate calls are made. Unfortunately, I did not have enough time to fully test the server side. Throughout the writing of this app, however, I implemented several layers of validation, and I plan to achieve full test coverage when I am able to dedicate more time to the app.
 
 ### Standard Acceptance Criteria
 ```
