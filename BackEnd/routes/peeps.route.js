@@ -1,7 +1,7 @@
 import express from 'express';
 import { newPeepValidation } from '../middleware/chitter.validation.js';
 import { peepGetController, peepCreateController, saveFavePeepsController, getFavPeepsController, getFavPeepController } from '../controllers/peep.controller.js';
-import { verifyToken } from './users.route.js';
+
 
 
 
@@ -19,8 +19,8 @@ router.route("/createpeep")
 router.route("/")
     .put(saveFavePeepsController);
 
-router.route("/savedpeeps/ids/:userID")
-    .get(getFavPeepController);
+// router.route("/savedpeeps/ids/:userID")
+//     .get(getFavPeepController);
 
 router.route("/savedpeeps/:userID")
     .get(getFavPeepsController);

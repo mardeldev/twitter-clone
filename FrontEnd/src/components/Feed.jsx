@@ -15,14 +15,14 @@ const Feed = ({ peeps, savedPeeps }) => {
     )
 }
 
-Feed.propTypes = {
-    peeps: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    savedPeeps: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+// Feed.propTypes = {
+//     peeps: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             id: PropTypes.string.isRequired,
+//         })
+//     ).isRequired,
+//     savedPeeps: PropTypes.arrayOf(PropTypes.string).isRequired
+// };
 
 
 export default Feed
