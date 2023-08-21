@@ -35,7 +35,7 @@ const SavedPeeps = () => {
         return (
             <div>
                 <Sidebar />
-                <p className="d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">You do not have any saved  Peeps...</p>;
+                <p className="d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">You do not have any saved Peeps...</p>;
             </div>
         )
     }

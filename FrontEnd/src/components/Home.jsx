@@ -38,7 +38,7 @@ const Home = () => {
         return (
             <div>
                 <Sidebar />
-                <p className="d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">Unable to fetch peep data...</p>;
+                <p className="d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">Fetching peep data...</p>;
             </div>
         )
     }
