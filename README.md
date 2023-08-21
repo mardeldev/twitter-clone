@@ -1,6 +1,6 @@
 # Chitter Challenge
 
-##  >> [Visit the app here](https://mardel-chitter.netlify.app/) <<
+##  >> [VISIT THE CHITTER APP LIVE HERE AND MAKE SOME PEEPS!!](https://mardel-chitter.netlify.app/) <<
 
 =================
 
