@@ -1,11 +1,13 @@
 # Chitter Challenge
 
-##  VISIT THE CHITTER APP LIVE HERE AND MAKE SOME PEEPS!:
+###  VISIT THE CHITTER APP LIVE HERE AND MAKE SOME PEEPS!:
 
-# >> (https://mardel-chitter.netlify.app/) <<
+>> (https://mardel-chitter.netlify.app/)
 
+---
+## About
 
-## Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
+Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
 
 <img width="1509" alt="image" src="https://github.com/mardeldev/chitter-challenge/assets/73969781/dfeafbb3-a793-4b5c-8c1c-79644e050593">
 
