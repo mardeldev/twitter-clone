@@ -3,6 +3,7 @@ import { useGetUserID } from "../hooks";
 
 
 
+
 export const getPeepData = async () => {
     try {
         const responseData = await axios.get("http://localhost:3000/");
@@ -66,18 +67,19 @@ export const post = async (peepContent) => {
         await axios.post("http://localhost:3000/createpeep", peepContent);
     } catch (error) {
         console.error(error);
-        console.log(peepContent);
+
     }
 }
 
-export const savePeep = async (peepID) => {
+export const savePeep = async (peepID, cookies) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const userID = useGetUserID();
+
     try {
         const response = await axios.put("http://localhost:3000/", { peepID, userID });
         return response
     } catch (error) {
         console.error(error);
-        console.log(peepID);
+        console.log(cookies);
     }
 }

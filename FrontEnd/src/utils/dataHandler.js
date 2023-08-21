@@ -51,8 +51,8 @@ export const postPeep = async (peepContent) => {
 }
 
 
-export const saveAPeep = async (peepID) => {
-    const response = await savePeep(peepID);
+export const saveAPeep = async (peepID, cookies) => {
+    const response = await savePeep(peepID, cookies);
     if (response?.error) {
         return response.error.message;
     }

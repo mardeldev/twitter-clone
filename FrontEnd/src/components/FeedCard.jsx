@@ -1,17 +1,21 @@
 import { dateFormatter } from "../hooks";
 import { saveAPeep } from "../utils/dataHandler.js";
+import { useCookies } from "react-cookie";
 
 
 
 
 const FeedCard = ({ peep, savedPeeps }) => {
     const formattedDate = dateFormatter(peep.peepCreated);
+    // eslint-disable-next-line no-unused-vars
+    const [cookies, _] = useCookies(["access_token"]);
 
 
     const savePeep = async (peepID) => {
+
         try {
-            await saveAPeep(peepID);
-            alert("Peep saved to favourites!");
+            await saveAPeep(peepID, cookies);
+            alert(`${"Peep saved to favourites!"}`);
             window.location.reload(false);
         } catch (error) {
             return error
