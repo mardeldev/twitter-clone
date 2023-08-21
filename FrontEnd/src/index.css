@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #171717;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,8 +24,17 @@ h2 {
   color: white;
 }
 
-p {
-  color: antiquewhite;
+
+div p {
+  color: rgb(255, 255, 255);
+}
+
+.peep-card-cta:hover {
+  cursor: pointer;
+}
+
+.feed-card {
+  max-width: 540px
 }
 
 .form-label {

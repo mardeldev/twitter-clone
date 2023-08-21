@@ -36,7 +36,7 @@ export const userLoginService = async reqBody => {
         const token = jwt.sign({ id: user._id }, process.env.SECRET);
 
 
-        return { token, userID: user._id };
+        return { token, userID: user._id, username: username };
     } catch (error) {
         return e;
     }

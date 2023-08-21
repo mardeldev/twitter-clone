@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useCookies } from 'react-cookie';
-import CreatePeep from './CreatePeep';
 
 
 const SidebarCard = ({ card: { imgURL, route, label } }) => {
+    // eslint-disable-next-line no-unused-vars
     const [cookies, setCookies] = useCookies(["access_token"]);
 
     function onClick() {

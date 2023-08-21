@@ -18,6 +18,10 @@ const PeepSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "users",
         required: true
+    },
+    username: {
+        type: String,
+        required: true
     }
 });
 

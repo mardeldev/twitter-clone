@@ -1,9 +1,11 @@
 import axios from "axios";
+import { useGetUserID } from "../hooks";
+
 
 
 export const getPeepData = async () => {
     try {
-        const responseData = await axios.get("http://localhost:3000/getPeeps");
+        const responseData = await axios.get("http://localhost:3000/");
         return responseData.data;
     } catch (error) {
         return error;
@@ -24,7 +26,7 @@ export const registerUser = async (username, password) => {
     }
 }
 
-export const login = async (username, password, setCookies) => {
+export const login = async (username, password) => {
     try {
         const response = await axios.post("http://localhost:3000/auth/login", {
             username,
@@ -39,9 +41,19 @@ export const login = async (username, password, setCookies) => {
 export const post = async (peepContent) => {
     try {
         await axios.post("http://localhost:3000/createpeep", peepContent);
-        alert("Peep Posted!")
     } catch (error) {
         console.error(error);
         console.log(peepContent);
+    }
+}
+
+export const savePeep = async (peepID) => {
+    const userID = useGetUserID();
+    try {
+        const response = await axios.put("http://localhost:3000/", { peepID, userID });
+        return response
+    } catch (error) {
+        console.error(error);
+        console.log(peepID);
     }
 }

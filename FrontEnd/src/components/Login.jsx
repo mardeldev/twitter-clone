@@ -8,6 +8,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    // eslint-disable-next-line no-unused-vars
     const [_, setCookies] = useCookies(["access_token"]);
 
     const onSubmit = async (event) => {
@@ -16,6 +17,7 @@ const Login = () => {
             const response = await loginUser(username, password, setCookies);
             setCookies("access_token", response.data.token)
             window.localStorage.setItem("userID", response.data.userID);
+            window.localStorage.setItem("username", response.data.username);
             navigate("/");
         } catch (error) {
             console.error(error);

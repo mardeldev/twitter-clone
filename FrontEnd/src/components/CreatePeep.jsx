@@ -1,23 +1,30 @@
 import { useState } from "react";
 import { postPeep } from "../utils/dataHandler.js";
-import { useGetUserID } from "../hooks/useGetUserID.js";
+import { useGetUserID, useGetUserName } from "../hooks/index.js";
+import { useNavigate } from "react-router-dom";
 
 
 const CreatePeep = () => {
     const userID = useGetUserID();
+    const username = useGetUserName();
+
 
     const [peepContent, setPeepContent] = useState({
         peepContent: "",
         imgURL: "https://cdn.discordapp.com/attachments/1110172643895808040/1142877481209167943/default-user-profile-picture_hvoncb.png",
         userOwner: userID,
-        peepCreated: "2023-08-16T00:00:00.000+00:00",
+        username: username,
+        peepCreated: Date.now,
     });
 
+    const navigate = useNavigate();
 
     const onSubmit = async (event) => {
         event.preventDefault();
         try {
             await postPeep(peepContent);
+            alert("Peep Posted!");
+            navigate("/");
         } catch (error) {
             console.error(error);
         }

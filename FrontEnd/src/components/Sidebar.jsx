@@ -1,4 +1,4 @@
-import { SidebarCard, CreatePeep } from "./index.js";
+import { SidebarCard } from "./index.js";
 import { sidebarLinks } from "../constants";
 
 
