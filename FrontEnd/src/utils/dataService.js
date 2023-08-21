@@ -6,7 +6,7 @@ import { useGetUserID } from "../hooks";
 
 export const getPeepData = async () => {
     try {
-        const responseData = await axios.get("http://localhost:3000/");
+        const responseData = await axios.get("https://chitter-31qm.onrender.com/");
         return responseData.data;
     } catch (error) {
         return error;
@@ -18,7 +18,7 @@ export const getFavPeeps = async () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const userID = useGetUserID();
     try {
-        const response = await axios.get(`http://localhost:3000/savedpeeps/ids/${userID}`);
+        const response = await axios.get(`https://chitter-31qm.onrender.com/savedpeeps/ids/${userID}`);
         return response;
     } catch (error) {
         return error;
@@ -29,7 +29,7 @@ export const getAllFavPeeps = async () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const userID = useGetUserID();
     try {
-        const response = await axios.get(`http://localhost:3000/savedpeeps/${userID}`);
+        const response = await axios.get(`https://chitter-31qm.onrender.com/savedpeeps/${userID}`);
         return response;
     } catch (error) {
         return error;
@@ -39,7 +39,7 @@ export const getAllFavPeeps = async () => {
 
 export const registerUser = async (username, password) => {
     try {
-        const response = await axios.post("http://localhost:3000/auth/register", {
+        const response = await axios.post("https://chitter-31qm.onrender.com/auth/register", {
             username,
             password
         });
@@ -51,7 +51,7 @@ export const registerUser = async (username, password) => {
 
 export const login = async (username, password) => {
     try {
-        const response = await axios.post("http://localhost:3000/auth/login", {
+        const response = await axios.post("https://chitter-31qm.onrender.com/auth/login", {
             username,
             password
         });
@@ -63,7 +63,7 @@ export const login = async (username, password) => {
 
 export const post = async (peepContent) => {
     try {
-        await axios.post("http://localhost:3000/createpeep", peepContent);
+        await axios.post("https://chitter-31qm.onrender.com/createpeep", peepContent);
     } catch (error) {
         console.error(error);
 
@@ -75,7 +75,7 @@ export const savePeep = async (peepID, cookies) => {
     const userID = useGetUserID();
 
     try {
-        const response = await axios.put("http://localhost:3000/", { peepID, userID });
+        const response = await axios.put("https://chitter-31qm.onrender.com/", { peepID, userID });
         return response
     } catch (error) {
         console.error(error);
