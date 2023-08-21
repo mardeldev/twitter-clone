@@ -16,7 +16,7 @@ const App = () => {
         isLoggedIn() ? <Home /> : <Login />
 
       } />
-      <Route path="/auth/login" element={<Login />} />
+      {/* <Route path="/auth/login" element={<Login />} /> */}
       <Route path="/auth/register" element={<Register />} />
       <Route path="/createpeep" element={<CreatePeep />} />
       <Route path="/savedpeeps" element={<SavedPeeps />} />

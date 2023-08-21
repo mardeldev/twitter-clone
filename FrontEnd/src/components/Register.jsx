@@ -59,7 +59,7 @@ const Register = () => {
                 </div>
                 <div>
                     <div className="d-flex justify-content-center">
-                        <a href="/auth/login"> <small> Already have an account? Click here to login.</small></a>
+                        <a href="/"> <small> Already have an account? Click here to login.</small></a>
                     </div>
                     <div className="mt-3 d-flex justify-content-center">
                         <button type="submit" className="btn btn-secondary">Sign up</button>
