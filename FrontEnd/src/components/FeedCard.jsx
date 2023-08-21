@@ -7,10 +7,12 @@ import { saveAPeep } from "../utils/dataHandler.js";
 const FeedCard = ({ peep, savedPeeps }) => {
     const formattedDate = dateFormatter(peep.peepCreated);
 
+
     const savePeep = async (peepID) => {
         try {
-            const response = await saveAPeep(peepID);
-            alert("Peep saved to favourites!")
+            await saveAPeep(peepID);
+            alert("Peep saved to favourites!");
+            window.location.reload(false);
         } catch (error) {
             return error
         }
@@ -32,7 +34,7 @@ const FeedCard = ({ peep, savedPeeps }) => {
 
                             <p className="card-text">{peep.peepContent}</p>
                             <p className="card-text"><small className="text-body-light">{formattedDate}</small> | {peep.username}</p>
-                            <a onClick={() => savePeep(peep._id)}><img src="../src/assets/heart-grey.svg" alt="favourite-peep" width="20" height="20" className={`me-4 peep-card-cta ${heartColour(savedPeeps)}`} /></a>
+                            <img onClick={() => savePeep(peep._id)} src="../src/assets/heart-grey.svg" alt="favourite-peep" width="20" height="20" className={`me-4 peep-card-cta ${heartColour(savedPeeps)}`} />
 
                             <img src="../src/assets/repost.svg" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />
                             <img src="../src/assets/share.svg" alt="favourite-peep" width="20" height="20" className="me-4 peep-card-cta" />

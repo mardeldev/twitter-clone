@@ -6,6 +6,7 @@ import { FeedCard } from "./index.js";
 const SavedPeeps = () => {
 
     const [savedPeeps, setSavedPeeps] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
 
     useEffect(() => {
@@ -16,10 +17,21 @@ const SavedPeeps = () => {
         try {
             const response = await getAllSavedPeeps();
             setSavedPeeps(response.data.savedPeeps);
+            if (response) setIsLoading(false);
         } catch (error) {
             return error;
         }
     };
+
+    if (isLoading) {
+        return (
+            <div>
+                <Sidebar />
+                <p className="d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">You haven't favourited any Peeps...</p>;
+            </div>
+        )
+    }
+
     return (
         <div>
             <Sidebar />
@@ -36,6 +48,10 @@ const SavedPeeps = () => {
 
         </div>
     )
+
+
 }
+
+
 
 export default SavedPeeps

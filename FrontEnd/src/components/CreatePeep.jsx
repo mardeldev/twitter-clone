@@ -40,7 +40,7 @@ const CreatePeep = () => {
     return (
         <div className="auth-container d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
 
-            <form className="mt-3" onSubmit={onSubmit}>
+            <form className="" onSubmit={onSubmit}>
                 <div className="d-flex justify-content-center">
                     <img src="../src/assets/logo-short.png" alt="logo" width="200" height="200" />
                 </div>

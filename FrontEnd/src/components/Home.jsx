@@ -44,13 +44,6 @@ const Home = () => {
     }
 
 
-
-
-
-
-
-
-
     return (
         <div>
             <Sidebar />
