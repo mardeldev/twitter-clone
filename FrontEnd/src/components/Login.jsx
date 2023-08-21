@@ -18,9 +18,13 @@ const Login = () => {
             setCookies("access_token", response.data.token)
             window.localStorage.setItem("userID", response.data.userID);
             window.localStorage.setItem("username", response.data.username);
-            window.location.reload(false);
-            navigate("/");
 
+            if (response.data.userID == undefined) {
+                alert(response.data.message)
+            } else {
+                window.location.reload(false);
+                navigate("/");
+            }
         } catch (error) {
             console.error(error);
         }

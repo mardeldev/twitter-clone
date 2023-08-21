@@ -10,7 +10,7 @@ describe('getPeepData tests', () => {
     describe('GET request tests to /response', () => {
         it('1. should actually make the external data call', async () => {
             // Arrange
-            // Nothing to arrange here. For this test, the data doesn't need to be returned.
+
             // Act
             await getPeepData();
             // Assert
