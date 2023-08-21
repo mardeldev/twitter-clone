@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Login, Feed, Home, CreatePeep, SavedPeeps, Register } from "./components/index.js";
 

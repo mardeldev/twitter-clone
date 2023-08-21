@@ -1,5 +1,5 @@
 import { FeedCard } from "./index.js";
-
+import PropTypes from 'prop-types';
 const Feed = ({ peeps, savedPeeps }) => {
 
     return (
@@ -14,5 +14,15 @@ const Feed = ({ peeps, savedPeeps }) => {
         </div>
     )
 }
+
+Feed.propTypes = {
+    peeps: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    savedPeeps: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
 
 export default Feed

@@ -1,6 +1,7 @@
 import { dateFormatter } from "../hooks";
 import { saveAPeep } from "../utils/dataHandler.js";
 import { useCookies } from "react-cookie";
+import PropTypes from 'prop-types';
 
 
 
@@ -49,5 +50,17 @@ const FeedCard = ({ peep, savedPeeps }) => {
         </div>
     )
 }
+
+FeedCard.propTypes = {
+    peep: PropTypes.shape({
+        _id: PropTypes.string.isRequired,
+        peepContent: PropTypes.string.isRequired,
+        imgURL: PropTypes.string.isRequired,
+        peepCreated: PropTypes.string.isRequired,
+        username: PropTypes.string.isRequired
+    }).isRequired,
+    savedPeeps: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
 
 export default FeedCard
