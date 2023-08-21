@@ -1,5 +1,5 @@
 Chitter Challenge
-##   [>> Visit the app here <<] (https://mardel-chitter.netlify.app/) 
+##   [>> Visit the app here <<](https://mardel-chitter.netlify.app/) 
 
 =================
 
