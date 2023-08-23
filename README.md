@@ -9,7 +9,7 @@
 
 Chitter is a full-stack application that is a take on the Twitter app. It allows the user to register and login with authentication, post 'peeps' and favourite them. 
 
-<img width="1509" alt="image" src="https://github.com/mardeldev/chitter-challenge/assets/73969781/dfeafbb3-a793-4b5c-8c1c-79644e050593">
+<img width="1509" alt="image" src="https://media.discordapp.net/attachments/1110172643895808040/1143968168390447157/image.png?width=1714&height=1070">
 
 
 ## Description
@@ -53,10 +53,10 @@ npm i
 
 # Project Planning Documentation
 ### Layer Diagram
-![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/c1f298a6-5a10-4655-bf49-3b802a240f4d)
+![image](https://media.discordapp.net/attachments/1110172643895808040/1143968720641871962/261942978-c1f298a6-5a10-4655-bf49-3b802a240f4d.png?width=1030&height=1070)
 
 ### Component Diagram
-![image](https://github.com/mardeldev/chitter-challenge/assets/73969781/9256435d-a99c-4e3b-8a6a-f056725dcb41)
+![image](https://media.discordapp.net/attachments/1110172643895808040/1143968720906092564/261944709-9256435d-a99c-4e3b-8a6a-f056725dcb41.png?width=1386&height=1070)
 
 
 # Testing
