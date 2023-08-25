@@ -40,10 +40,17 @@ For this application, I used the MERN stack of technologies among others, which 
 ```
 npm i
 ```
+
+- While in `/FrontEnd`, run
+```
+npm start
+```
+
 - Navigate to the Backend folder and run
 ```
 npm i
 ```
+
 - Open a browser and navigate to `http://localhost:5173`.
 - You should now be able to try the app for yourself!
 
