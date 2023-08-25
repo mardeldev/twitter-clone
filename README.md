@@ -3,6 +3,8 @@
 ###  VISIT THE CHITTER APP LIVE HERE AND MAKE SOME PEEPS!:
 
 >> (https://mardel-chitter.netlify.app/)
+>> 
+>> --> Logging in and fetching the data might take a minute to load when logging in as the service hosting the server needs some time to boot up after a period of inactivity.
 
 ---
 ## About
